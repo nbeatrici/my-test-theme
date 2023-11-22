@@ -1,4 +1,4 @@
-<div class="container bootstrap-grid-selector">
+<div class="container bootstrapcards">
     <div class="row">
         <#if group.getSiblings()?has_content>
             <#list group.getSiblings() as cur_group>
