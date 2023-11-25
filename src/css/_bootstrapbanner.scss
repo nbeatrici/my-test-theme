@@ -1,29 +1,30 @@
-.bannerimg {
-    img {
-      max-width: 300px !important;
-    }
-  
-    h1 {
-      font-size: 2.0rem;
-    }
+.test-banner .card-image {
+  object-fit: fill;
+}
+
+.test-banner .card-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+}
+
+@media (max-width: 767.98px) {
+  .test-banner .banner-title {
+    font-size: 32px !important;
   }
-  
-  @media (min-width: 768px) {
-    .bannerimg img {
-      max-width: 400px !important;
-    }
-  
-    h1 {
-      font-size: 2.0rem;
-    }
+}
+@media (max-width: 575.98px) {
+  .test-banner .banner-title {
+    font-size: 20px !important;
   }
-  
-  @media (min-width: 992px) {
-    .bannerimg img {
-      max-width: 500px !important;
-    }
-  
-    h1 {
-      font-size: 3rem;
-    }
+}
+
+@media (max-width: 280.98px) {
+  .test-banner .banner-title {
+    font-size: 18px !important;
   }
+}
