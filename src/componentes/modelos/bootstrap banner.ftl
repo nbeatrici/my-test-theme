@@ -8,7 +8,7 @@
     <div class="card-img-overlay bg-${configuration.backgroundColor.cssClass} row flex-column justify-content-center py-4 c-px-md-80">
         <div class="col-lg-5">
             <lfr-editable class="my-3" id="text01" type="rich-text">
-                <span style="color: var(--ct-as-claro, #ffffff); font-family: Unimed Sans; font-size: 16px; font-style: normal; font-weight: 600;">
+                <span style="color: var(--ct-as-claro, #ae23ae); font-family: Unimed Sans; font-size: 16px; font-style: normal; font-weight: 600;">
                     título pequeno
                 </span>
             </lfr-editable>
