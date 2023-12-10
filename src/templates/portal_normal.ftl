@@ -79,7 +79,7 @@
 		infinite: true,
 		speed: 300,
 		slidesToShow: 4,
-		slidesToScroll: 6,
+		slidesToScroll: 1,
 		autoplay: true,
 		autoplaySpeed: 2000,
 		responsive: [{
@@ -105,9 +105,6 @@
 					slidesToScroll: 1
 				}
 			}
-			// You can unslick at a given breakpoint now by adding:
-			// settings: "unslick"
-			// instead of a settings object
 		]
 	});
 	</script>
