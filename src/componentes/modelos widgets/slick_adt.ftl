@@ -1,7 +1,8 @@
 <#if entries?has_content>
     <div class="container">
-        <div class="responsive row d-flex">
+        <div class="responsive row">
             <#list entries as entry>
+                <#assign AssetCategoryLocalService=serviceLocator.findService("com.liferay.asset.kernel.service.AssetCategoryLocalService") />
                 <#assign viewURL=assetPublisherHelper.getAssetViewURL(renderRequest, renderResponse, entry) />
                 <#assign assetRenderer=entry.getAssetRenderer() />
                 <#assign DDMFormFieldValuesMap=assetRenderer.getDDMFormValuesReader().getDDMFormValues().getDDMFormFieldValuesMap() />
@@ -27,12 +28,13 @@
                                         [0].getValue().getString(locale) />
                                     ${author}
                                 </p>
-                                <p class="card-text">
-                                    <#assign dateField=DDMFormFieldsReferencesMap['data'].name />
-                                    <#assign date=DDMFormFieldValuesMap[dateField]
-                                        [0].getValue().getString(locale) />
-                                    ${date}
-                                </p>
+                                <div>
+                                    <#list AssetCategoryLocalService.getEntryCategories(entry.getEntryId()) as entryCat>
+                                        <p class="tag m-0">
+                                            ${entryCat.getName()}
+                                        </p>
+                                    </#list>
+                                </div>
                             </div>
                         </div>
                     </a>

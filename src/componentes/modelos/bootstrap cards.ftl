@@ -1,26 +1,18 @@
-<div class="container bootstrapcards">
-    <div class="row">
-        <#if group.getSiblings()?has_content>
-            <#list group.getSiblings() as cur_group>
-                <div class="col-md-4">
-                    <div class="card bg-dark text-white">
-                        <#if (cur_group.image.getData())?? && cur_group.image.getData() !="">
-                            <img alt="${cur_group.image.getAttribute("alt")}" data-fileentryid="${cur_group.image.getAttribute("fileEntryId")}" src="${cur_group.image.getData()}" class="img-fluid bootstrap-button-color" />
-                        </#if>
-                        <div class="card-body">
-                            <#if (cur_group.text.getData())??>
-                                <h5 class="card-title">
-                                    ${cur_group.text.getData()}
-                                </h5>
-                            </#if>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <div class="mt-auto">
-                                <a href="#" class="btn btn-primary btn-block bootstrap-button-color">Acessar</a>
-                            </div>
-                        </div>
+<div class="fragment">
+    <div class="container">
+        <div class="row gx-1">
+            [#list 1..configuration.numberOfCards as index]
+            <div class="col-4">
+                <div class="card">
+                    <img class="card-img-top" data-lfr-editable-id="card-img-${index}" data-lfr-editable-type="image" src="" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title" data-lfr-editable-id="card-title-${index}" data-lfr-editable-type="text">Título</h5>
+                        <p class="card-text" data-lfr-editable-id="card-text-${index}" data-lfr-editable-type="text">Área para as informações do card.</p>
+                        <a href="#" class="btn btn-primary bg-${configuration.buttonColor.cssClass} text-${configuration.buttonTextColor.cssClass}" data-lfr-editable-id="button-link" data-lfr-editable-type="link">Botão</a>
                     </div>
                 </div>
-            </#list>
-        </#if>
+            </div>
+            [/#list]
+        </div>
     </div>
 </div>

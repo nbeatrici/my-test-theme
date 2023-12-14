@@ -1,164 +1,42 @@
 {
-    "availableLanguageIds": [
-        "en_US"
-    ],
-    "contentType": "journal",
-    "dataDefinitionFields": [
+    "fieldSets": [
         {
-            "customProperties": {
-                "labelAtStructureLevel": true,
-                "ddmStructureLayoutId": "",
-                "ddmStructureId": "",
-                "upgradedStructure": false,
-                "fieldReference": "group",
-                "rows": [
-                    {
-                        "columns": [
-                            {
-                                "size": 12,
-                                "fields": [
-                                    "Image58741112"
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "columns": [
-                            {
-                                "size": 12,
-                                "fields": [
-                                    "Text13572558"
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "collapsible": false
-            },
-            "defaultValue": {},
-            "fieldType": "fieldset",
-            "indexable": false,
-            "label": {
-                "en_US": "Fields Group"
-            },
-            "localizable": false,
-            "name": "Fieldset97050209",
-            "nestedDataDefinitionFields": [
+            "fields": [
                 {
-                    "customProperties": {
-                        "visibilityExpression": "",
-                        "fieldNamespace": "",
-                        "dataType": "image",
-                        "requiredDescription": true,
-                        "fieldReference": "image"
+                    "name": "numberOfCards",
+                    "label": "Number of Cards",
+                    "description": "number-of-cards",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Placeholder"
                     },
-                    "defaultValue": {},
-                    "fieldType": "image",
-                    "indexType": "text",
-                    "indexable": true,
-                    "label": {
-                        "en_US": "Image"
-                    },
-                    "localizable": true,
-                    "name": "Image58741112",
-                    "nestedDataDefinitionFields": [],
-                    "readOnly": false,
-                    "repeatable": false,
-                    "required": false,
-                    "showLabel": true,
-                    "tip": {
-                        "en_US": ""
-                    }
+                    "dataType": "int",
+                    "defaultValue": "1"
                 },
                 {
-                    "customProperties": {
-                        "labelAtStructureLevel": true,
-                        "confirmationErrorMessage": {
-                            "en_US": ""
-                        },
-                        "hideField": false,
-                        "dataType": "string",
-                        "tooltip": {
-                            "en_US": ""
-                        },
-                        "requireConfirmation": false,
-                        "displayStyle": "singleline",
-                        "visibilityExpression": "",
-                        "fieldNamespace": "",
-                        "options": {},
-                        "nativeField": false,
-                        "confirmationLabel": {
-                            "en_US": ""
-                        },
-                        "fieldReference": "text",
-                        "placeholder": {
-                            "en_US": ""
-                        },
-                        "direction": [
-                            "vertical"
-                        ]
+                    "name": "buttonText",
+                    "label": "Button Text",
+                    "description": "button-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Placeholder"
                     },
-                    "defaultValue": {},
-                    "fieldType": "text",
-                    "indexType": "keyword",
-                    "indexable": true,
-                    "label": {
-                        "en_US": "Text"
-                    },
-                    "localizable": true,
-                    "name": "Text13572558",
-                    "nestedDataDefinitionFields": [],
-                    "readOnly": false,
-                    "repeatable": false,
-                    "required": false,
-                    "showLabel": true,
-                    "tip": {
-                        "en_US": ""
-                    }
+                    "dataType": "string",
+                    "defaultValue": "Go Somewhere"
+                },
+                {
+                    "name": "buttonColor",
+                    "label": "Cor do botão",
+                    "type": "colorPalette",
+                    "dataType": "object"
+                },
+                {
+                    "name": "buttonTextColor",
+                    "label": "Cor de texto do botão",
+                    "type": "colorPalette",
+                    "dataType": "object"
                 }
-            ],
-            "readOnly": false,
-            "repeatable": true,
-            "required": false,
-            "showLabel": true,
-            "tip": {}
+            ]
         }
-    ],
-    "defaultDataLayout": {
-        "dataLayoutFields": {},
-        "dataLayoutPages": [
-            {
-                "dataLayoutRows": [
-                    {
-                        "dataLayoutColumns": [
-                            {
-                                "columnSize": 12,
-                                "fieldNames": [
-                                    "Fieldset97050209"
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "description": {
-                    "en_US": ""
-                },
-                "title": {
-                    "en_US": ""
-                }
-            }
-        ],
-        "dataRules": [],
-        "description": {},
-        "name": {
-            "en_US": "Estrutura Cards"
-        },
-        "paginationMode": "single-page"
-    },
-    "defaultLanguageId": "en_US",
-    "description": {},
-    "name": {
-        "en_US": "Estrutura Cards"
-    },
-    "storageType": "default"
+    ]
 }
