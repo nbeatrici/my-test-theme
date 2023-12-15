@@ -4,9 +4,10 @@
 
 @import 'liferay-font-awesome/scss/font-awesome';
 @import 'liferay-font-awesome/scss/glyphicons';
-@import '_bootstrapcards.scss';
-@import '_bootstrapbanner.scss';
-
+@import 'cards.scss';
+@import 'banner.scss';
+@import 'slick-theme.scss';
+@import 'slick.scss';
 /* endinject */
 
 /* This file allows you to override default styles in one central location for easier upgrade and maintenance. */

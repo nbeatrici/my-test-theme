@@ -4,8 +4,6 @@
 
 <head>
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 	<title>
 		${html_title}
 	</title>
@@ -72,42 +70,8 @@
 		page=body_bottom_include />
 	<@liferay_util["include"]
 		page=bottom_include />
-	<script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-	<script>
-	$('.responsive').slick({
-		dots: true,
-		infinite: true,
-		speed: 300,
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		autoplay: true,
-		autoplaySpeed: 2000,
-		responsive: [{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3,
-					infinite: true,
-					dots: true
-				}
-			},
-			{
-				breakpoint: 600,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1
-				}
-			}
-		]
-	});
-	</script>
+	<script src="${javascript_folder}/slick.min.js"></script>
+	<script src="${javascript_folder}/responsive.js"></script>
 </body>
 
 </html>
