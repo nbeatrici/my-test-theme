@@ -1,5 +1,5 @@
 <div class="container">
-    <h2>
+    <h2 class="font-weight-bold lead">
         <#if (titulo.getData())??>
             ${titulo.getData()}
         </#if>

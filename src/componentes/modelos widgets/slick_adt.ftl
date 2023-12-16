@@ -9,25 +9,19 @@
                 <#assign DDMFormFieldsReferencesMap=assetRenderer.article.DDMStructure.DDMForm.getDDMFormFieldsReferencesMap(true) />
                 <div class="col-md-12">
                     <a href="${viewURL}">
-                        <div class="card ">
+                        <div class="card">
                             <#assign imgField=DDMFormFieldsReferencesMap['imagem'].name />
                             <#assign imgValue=DDMFormFieldValuesMap[imgField]
                                 [0].getValue().getString(locale) />
                             <#assign imgTop=imgValue?eval />
                             <img class="card-img-top" src="${imgTop.url}">
                             <div class="card-body">
-                                <h5 class="card-title">
+                                <h5 class="card-title text-justify">
                                     <#assign titleField=DDMFormFieldsReferencesMap['titulo'].name />
                                     <#assign title=DDMFormFieldValuesMap[titleField]
                                         [0].getValue().getString(locale) />
                                     ${title}
                                 </h5>
-                                <p class="card-text">
-                                    <#assign authorField=DDMFormFieldsReferencesMap['autor'].name />
-                                    <#assign author=DDMFormFieldValuesMap[authorField]
-                                        [0].getValue().getString(locale) />
-                                    ${author}
-                                </p>
                                 <div>
                                     <#list AssetCategoryLocalService.getEntryCategories(entry.getEntryId()) as entryCat>
                                         <p class="tag m-0">
