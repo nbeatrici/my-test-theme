@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container py-4">
 	<div class="row gx-1">
 		[#list 1..configuration.numberOfCards as index]
-		<div class="col-4">
+		<div class="col-md-4">
 			<div class="card">
 				<img class="card-img-top" data-lfr-editable-id="card-img-${index}" data-lfr-editable-type="image" src="" alt="">
 				<div class="card-body">
