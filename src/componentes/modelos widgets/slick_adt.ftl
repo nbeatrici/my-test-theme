@@ -8,7 +8,7 @@
                 <#assign DDMFormFieldValuesMap=assetRenderer.getDDMFormValuesReader().getDDMFormValues().getDDMFormFieldValuesMap() />
                 <#assign DDMFormFieldsReferencesMap=assetRenderer.article.DDMStructure.DDMForm.getDDMFormFieldsReferencesMap(true) />
                 <div class="col-md-12">
-                    <a href="${viewURL}">
+                    <a href="${viewURL}" target="_blank">
                         <div class="card">
                             <#assign imgField=DDMFormFieldsReferencesMap['imagem'].name />
                             <#assign imgValue=DDMFormFieldValuesMap[imgField]
@@ -16,7 +16,7 @@
                             <#assign imgTop=imgValue?eval />
                             <img class="card-img-top" src="${imgTop.url}">
                             <div class="card-body">
-                                <h5 class="card-title text-justify">
+                                <h5 class="card-title font-weight-bold">
                                     <#assign titleField=DDMFormFieldsReferencesMap['titulo'].name />
                                     <#assign title=DDMFormFieldValuesMap[titleField]
                                         [0].getValue().getString(locale) />
@@ -24,7 +24,7 @@
                                 </h5>
                                 <div>
                                     <#list AssetCategoryLocalService.getEntryCategories(entry.getEntryId()) as entryCat>
-                                        <p class="tag m-0">
+                                        <p class="tag m-0 font-weight-light">
                                             ${entryCat.getName()}
                                         </p>
                                     </#list>
