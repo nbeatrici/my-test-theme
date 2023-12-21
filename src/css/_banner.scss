@@ -1,30 +1,53 @@
-.test-banner .card-image {
-  object-fit: fill;
+.banner .card-img {
+  object-fit: cover;
 }
 
-.test-banner .card-image::before {
-  content: "";
+.banner {
+  color: #000;
+  .card-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+  }
+}
+.border-0 {
+  border-style: none;
+}
+
+.margin {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.z-index {
+  z-index: 99;
+}
+
+.opacity {
+  z-index: 9;
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
   width: 100%;
-  background-size: 100% 100%;
+  height: 100%;
+  opacity: 0.65;
 }
 
 @media (max-width: 767.98px) {
-  .test-banner .banner-title {
+  .banner .banner-title {
     font-size: 32px !important;
   }
 }
 @media (max-width: 575.98px) {
-  .test-banner .banner-title {
+  .banner .banner-title {
     font-size: 20px !important;
   }
 }
 
 @media (max-width: 280.98px) {
-  .test-banner .banner-title {
+  .banner .banner-title {
     font-size: 18px !important;
   }
 }

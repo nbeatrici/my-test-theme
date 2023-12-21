@@ -1,0 +1,10 @@
+@mixin background-colors($color-name, $color-value) {
+    .bg-#{$color-name} {
+      background-color: $color-value;
+    }
+  }
+  
+  @include background-colors(rosa, #dc8bc0da);
+  @include background-colors(marinho, #4e6a82);
+  @include background-colors(verde, #a4e7e4);
+  @include background-colors(amarelo, #ecce75);
