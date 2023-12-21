@@ -8,12 +8,12 @@
     <div class="card-img-overlay bg-${configuration.backgroundColor.cssClass} row flex-column justify-content-center py-4 c-px-md-80">
         <div class="col-lg-5">
             <lfr-editable class="my-3" id="text01" type="rich-text">
-                <span style="font-family: Unimed Sans; font-size: 16px; font-style: normal; font-weight: 600;">
+                <span style="font-size: 16px; font-style: normal; font-weight: 600;">
                     Título
                 </span>
             </lfr-editable>
             <lfr-editable id="text02" type="rich-text">
-                <span class="banner-title" style="font-family: Unimed Sans; font-size: 40px; font-style: normal; font-weight: 700;">
+                <span class="banner-title" style="font-size: 40px; font-style: normal; font-weight: 700;">
                     Mensagem
                 </span>
             </lfr-editable>

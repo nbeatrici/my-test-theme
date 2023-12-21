@@ -1,5 +1,5 @@
 <nav aria-label="<@liferay.language key=" site-pages" />" class="${nav_css_class}" id="navigation" role="navigation">
-<ul role="menubar">
+<ul role="menubar" class="navbar-nav">
 	<#list nav_items as nav_item>
 		<#assign
 			nav_item_attr_has_popup=""
@@ -8,9 +8,9 @@
 		<#if nav_item.isSelected()>
 			<#assign
 				nav_item_attr_has_popup="aria-haspopup='true'"
-				nav_item_css_class="selected" />
+				nav_item_css_class="active" />
 		</#if>
-		<li class="${nav_item_css_class}" id="layout_${nav_item.getLayoutId()}" role="presentation">
+		<li class="${nav_item_css_class} px-2" id="layout_${nav_item.getLayoutId()}" role="presentation">
 			<a ${nav_item_attr_has_popup} href="${nav_item.getURL()}" ${nav_item.getTarget()} role="menuitem"><span>
 					<@liferay_theme["layout-icon"]
 						layout=nav_item_layout />
@@ -23,7 +23,7 @@
 							nav_child_css_class="" />
 						<#if nav_item.isSelected()>
 							<#assign
-								nav_child_css_class="selected" />
+								nav_child_css_class="active" />
 						</#if>
 						<li class="${nav_child_css_class}" id="layout_${nav_child.getLayoutId()}" role="presentation">
 							<a href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem">

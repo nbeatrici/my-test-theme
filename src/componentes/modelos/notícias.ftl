@@ -1,28 +1,23 @@
 <div class="container">
-    <h2 class="font-weight-bold lead">
-        <#if (titulo.getData())??>
-            ${titulo.getData()}
-        </#if>
-    </h2>
-    <div class="content">
-        <div class="content-image">
-            <#if (imagem.getData())?? && imagem.getData() !="">
-                <img alt="${imagem.getAttribute("alt")}" data-fileentryid="${imagem.getAttribute("fileEntryId")}" src="${imagem.getData()}" />
-            </#if>
+    <div class="mx-n5">
+        <div class="d-flex align-items-center">
+            <h1>
+                <#if (titulo.getData())??>
+                    ${titulo.getData()}
+                </#if>
+            </h1>
+            <div>
+                <#if (imagem.getData())?? && imagem.getData() !="">
+                    <img class="img-fluid rounded" alt="${imagem.getAttribute("alt")}" data-fileentryid="${imagem.getAttribute("fileEntryId")}" src="${imagem.getData()}" />
+                </#if>
+            </div>
         </div>
-        <div class="content-text">
-            <#if (conteudo.getData())??>
-                ${conteudo.getData()}
-            </#if>
-        </div>
-        <div class="">
-            <#if AssetCategoryLocalService??>
-                <#list AssetCategoryLocalService.getEntryCategories(curEntry.getEntryId()) as entryCat>
-                    <p>
-                        ${entryCat.getName()}
-                    </p>
-                </#list>
-            </#if>
+        <div class="pt-4 px-n5">
+            <p>
+                <#if (conteudo.getData())??>
+                    ${conteudo.getData()}
+                </#if>
+            </p>
         </div>
     </div>
 </div>
