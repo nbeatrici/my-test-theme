@@ -14,7 +14,7 @@
                         <#assign imgValue=DDMFormFieldValuesMap[imgField]
                             [0].getValue().getString(locale) />
                         <#assign imgTop=imgValue?eval />
-                        <img class="card-img-top" src="${imgTop.url}">
+                        <img class="card-img-top image" src="${imgTop.url}">
                         <div class="card-body">
                             <a href="${viewURL}">
                                 <h5 class="card-title font-weight-bold">
